@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title></title>
+    <style type="text/css">
+	body {
+		font-size : 3.3mm;
+        font-family: "SimSun";
+        /*border:1px solid #000;*/
+	}
+    #box {
+        height:265mm;
+        width:180mm;
+        margin : 0 auto;
+        
+    }
+	div,span,tr, td,ul,li {
+		margin : 0;
+		padding : 0;
+	}
+    ul {
+        list-style: none;
+    }
+	table {
+		width : 180mm;
+		/*border: 1px solid #000;*/
+		margin: 0 auto;
+	}
+	#logo {
+		width : 23mm;
+		height: 17mm;
+	}
+	#xygs_zh {
+		margin : 0 0 1mm 5mm;
+	}
+	#xygs_en {
+	    font-family: "Comic Sans MS";
+	}
+    #tic {
+		width : 15mm;
+		height : 8mm;
+	}
+    #bottom {
+        position:absolute;
+        bottom: 10mm;
+    }
+</style>
+</head>
+<body>
+<div id="box">
+    <table style="border-bottom: 1px solid #000;">
+        <tr>
+            <td style="width:30mm;"><img alt="" src="logo.jpg" id="logo"/></td>
+            <td>
+                <span id="xygs_zh">翔友旅游有限公司</span><br/>
+                <span id="xygs_en">AAT Travel Services Limited</span>
+            </td>
+            <td style="text-align:right;"><img alt="" src="tic.jpg" id="tic" style="margin-right:5mm;"/></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="font-size:2mm;">
+                <div>
+                    <span>香港九龙尖沙咀柯士旬道122号丽斯中心8楼C室</span>
+                    <span style="margin-left:5mm;">Tel:(852)2187 2906 Fax:(852)2187 2907</span>
+                </div>
+                <div>
+                    <span>Suite C.8/F.. Ritz Plaza, 122 Austin Road, Tsim Sha Tsui, Kowloon., HongKong</span>
+                </div>
+            </td>
+            <td style="text-align:right;">
+                <span style="margin-right:5mm;font-size:2mm;font-family:SimSun;">旅行社牌照号码: 352980</span>
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td colspan="5" align="center" style="font-size:5mm;">销售订单</td>
+        </tr>
+        <tr>
+            <td colspan="2">###company###</td>
+            <td width="35%" rowspan="9"> </td>
+            <td align="right">发票日期：</td>
+            <td align="left">###inv_date###</td>
+        </tr>
+        <tr>
+            <td colspan="2">###company_address1###</td>
+            <td align="right">页次：</td>
+            <td align="left">1/1</td>
+        </tr>
+        <tr>
+            <td colspan="2">###company_address2###</td>
+            <td align="right">订单号码：</td>
+            <td align="left"></td>
+        </tr>
+        <tr>
+            <td colspan="2"> </td>
+            <td align="right">我方备考：</td>
+            <td align="left">###weRmks###</td>
+        </tr>
+        <tr>
+            <td colspan="2">联  络 人 : ###liaison###</td>
+            <td align="right">贵方备考：</td>
+            <td align="left">###youRmks###</td>
+        </tr>
+        <tr>
+            <td colspan="2">电话号码 : ###phone###</td>
+            <td align="right">交货日期：</td>
+            <td align="left">###DeliveryDate###</td>
+        </tr>
+        <tr>
+            <td colspan="2">传真号码 : ###FaxNumber###</td>
+            <td align="right">条款：</td>
+            <td align="left">1天</td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td align="left"></td>
+            <td align="right">公司码：</td>
+            <td align="left">###CompanyCode###</td>
+        </tr>
+        <tr>
+            <td colspan="2"></td>
+            <td align="right">货币：</td>
+            <td align="left">###Currency###</td>
+        </tr>
+    </table>
+        <table style="margin-top:3mm;">
+            <tr>
+                <td><div style="width:38mm;border-bottom:1px solid #000;">项目</div></td>
+                <td><div style="width:59mm;border-bottom:1px solid #000;">说明</div></td>
+                <td><div style="width:20mm;border-bottom:1px solid #000;text-align:right;">使用人</div></td>
+                <td><div style="width:20mm;border-bottom:1px solid #000;text-align:right;">项目时间</div></td>
+                <td><div style="width:8mm;border-bottom:1px solid #000;text-align:right;">数量</div></td>
+                <td><div style="width:12mm;border-bottom:1px solid #000;">单位</div></td>
+                <td><div style="width:21mm;border-bottom:1px solid #000;text-align:right;">价格</div></td>
+            </tr>
+            ###tr_so###
+        </table>
+    <div id="bottom">
+        <p style="position:relative;font-size:4mm;">总金额大写：###amountChinese###</p>
+        <table style="width:40mm;margin-left:140mm;">
+            <tr>
+                <td style="width:13mm;text-align:right;">总金额：</td>
+                <td style="text-align:right;">###total_amount###</td>
+            </tr>
+            <tr>
+                <td style="width:13mm;text-align:right;">付款：</td>
+                <td style="text-align:right;">0.00</td>
+            </tr>
+            <tr>
+                <td style="width:13mm;text-align:right;">结余：</td>
+                <td style="text-align:right;border-bottom:3px double #000;">###total_amount###</td>
+            </tr>
+        </table>
+        <table style="margin-top:9mm;">
+            <tr>
+                <td style="width:17mm;">我方签署：</td>
+                <td style="width:38mm;border-bottom:1px solid #000;">###WeSign###</td>
+                <td style="width:55.4mm;"></td>
+                <td style="width:17mm;">贵方签署：</td>
+                <td style="border-bottom:1px solid #000;"> </td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

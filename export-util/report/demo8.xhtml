@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+      <style type="text/css">
+    body {
+		font-size : 3.3mm;
+        font-family: SimSun;
+
+	}
+    #xx{
+        background-color:#0000ff;
+
+    }
+    
+    table{
+        border-collapse:collapse;
+        table-layout: fixed;
+        
+    }
+   <!-- /*PDF分页所用*/
+        div.header-right {
+            display: none
+        }
+
+        @media print {
+
+            div.header-right {
+                display: block;
+                position: running(header-right);
+            }
+
+            div.footer-center {
+                display: block;
+                position: running(footer-center);
+            }
+        }
+
+        @page {
+            margin: 0.65in;
+            padding: 1em;
+            @top-right { content: element(header-right) };
+            @bottom-right { content: element(footer-center) };
+        }
+
+        #pagenumber:before {
+            content: counter(page);
+        }
+
+        #pagecount:before {
+            content: counter(pages);
+        }
+         -->
+
+	</style>
+<title>
+    范例
+</title>
+</head>
+
+<body>
+<div id="header-right" class="header-right" align="right">测试报告<hr/></div>
+<div id="footer-center" class="footer-center" align="center"><hr/>第 <span id="pagenumber"/> 页/共  <span id="pagecount"/>   页</div>
+
+<table width="200" border="1">
+  <tr>
+    <td id="xx">${test}</td>
+    <td colspan="3" id="xx">${test}</td>
+    <td colspan="2" id="xx">${test}</td>  </tr>
+  <tr>
+    <td colspan="4">${test}</td>
+    <td rowspan="5">${test}</td>
+    <td>${test}</td>
+  </tr>
+  <tr>
+    <td rowspan="4">${test}</td>
+    <td rowspan="4">${test}</td>
+    <td>${test}</td>
+    <td rowspan="4">${test}</td>
+    <td rowspan="4">${test}</td>
+  </tr>
+  <tr>
+    <td>${test}</td>
+  </tr>
+  <tr>
+    <td>${test}</td>
+  </tr>
+  <tr>
+    <td>${test}</td>
+  </tr>
+</table>
+</body>
+</html>

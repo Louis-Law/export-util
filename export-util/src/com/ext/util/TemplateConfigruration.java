@@ -10,7 +10,7 @@ public class TemplateConfigruration {
 	private static String templateDir = "/templates";
 	private static String WebContentPath;
 	
-	private static Logger log = Logger.getLogger(HTM2PDF.class);
+	private static Logger log = Logger.getLogger(HTML2PDF.class);
 	private static boolean isInit = false;
 	private static Configuration cfg ;
 	public static void init(String tempPath) {

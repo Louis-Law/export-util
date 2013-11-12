@@ -14,7 +14,7 @@ import com.lowagie.text.pdf.BaseFont;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 
-public class HTM2PDF {
+public class HTML2PDF {
 	private static Configuration cfg;
 	
 	public static void init(String templatePath){

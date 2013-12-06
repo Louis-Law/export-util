@@ -1,9 +1,11 @@
 package com.ext.util;
 
 import java.io.ByteArrayOutputStream;
-import java.io.File;
 import java.io.FileOutputStream;
 import java.io.StringWriter;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.xhtmlrenderer.pdf.ITextFontResolver;
@@ -62,44 +64,43 @@ public class HTML2PDF {
 		// 生成pdf
 		ITextRenderer render = new ITextRenderer();
 		ITextFontResolver fontResolver = render.getFontResolver();
-		String curDir = System.getProperty("user.dir");
-
+		String curDir = HTML2PDF.class.getResource("/simsun.ttc").getFile().replaceAll("%20", " ");
+		
 		/**
 		 * simsun.ttc [宋体] 是//C:\WINDOWS\Fonts\里的， 可以把他下面的ttc都拷贝到项目中，想引用哪个就选择哪个,
 		 * 本实例程序只拷贝了simsun.ttc到Fonts源码包中
 		 */
-		String songti = new File(curDir + "/Fonts", "simsun.ttc").toString();
 		fontResolver
-				.addFont(songti, BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
+				.addFont(curDir, BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
 		render.setDocumentFromString(content);
 		render.layout();
 		return render;
 	}
 
-//	public static void main(String[] args) throws Exception {
-//		templateDir = "/report";
-//		// 第二步 填充数据
-//		List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
-//		Map<String, Object> item1 = new HashMap<String, Object>();
-//		item1.put("id", "001");
-//		item1.put("age", "40");
-//		item1.put("name", "张三");
-//		item1.put("address", "中南海");
-//		list.add(item1);
-//		Map<String, Object> item2 = new HashMap<String, Object>();
-//		item2.put("id", "002");
-//		item2.put("age", "60");
-//		item2.put("name", "李四");
-//		item2.put("address", "北戴河");
-//		list.add(item2);
-//		Map<String, Object> item3 = new HashMap<String, Object>();
-//		item3.put("id", "002");
-//		item3.put("age", "60");
-//		item3.put("name", "王五");
-//		item3.put("address", "知春路");
-//		list.add(item3);
-//		Map<String, Object> data = new HashMap<String, Object>();
-//		data.put("items", list);
-//		System.out.println(toPDFFile(data, "demo.ftl",null));
-//	}
+	public static void main(String[] args) throws Exception {
+		TemplateConfigruration.init("E:/about work/githome/git/export-util/export-util/report");
+		// 第二步 填充数据
+		List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
+		Map<String, Object> item1 = new HashMap<String, Object>();
+		item1.put("id", "001");
+		item1.put("age", "40");
+		item1.put("name", "张三");
+		item1.put("address", "中南海");
+		list.add(item1);
+		Map<String, Object> item2 = new HashMap<String, Object>();
+		item2.put("id", "002");
+		item2.put("age", "60");
+		item2.put("name", "李四");
+		item2.put("address", "北戴河");
+		list.add(item2);
+		Map<String, Object> item3 = new HashMap<String, Object>();
+		item3.put("id", "002");
+		item3.put("age", "60");
+		item3.put("name", "王五");
+		item3.put("address", "知春路");
+		list.add(item3);
+		Map<String, Object> data = new HashMap<String, Object>();
+		data.put("items", list);
+		System.out.println(toPDFByteArray(data, "demo.ftl"));
+	}
 }

@@ -8,7 +8,6 @@
 	<classpathentry kind="lib" path="lib/core-renderer-minimal.jar"/>
 	<classpathentry kind="lib" path="lib/core-renderer.jar"/>
 	<classpathentry kind="lib" path="lib/freemarker-2.3.8.jar"/>
-	<classpathentry kind="lib" path="lib/iText-2.0.8.jar"/>
 	<classpathentry kind="lib" path="lib/jdom.jar"/>
 	<classpathentry kind="lib" path="lib/log4j-1.2.15.jar"/>
 	<classpathentry kind="lib" path="lib/log4j-over-slf4j-1.6.1.jar"/>
@@ -18,5 +17,6 @@
 	<classpathentry kind="lib" path="lib/poi-ooxml-3.6-20091214.jar"/>
 	<classpathentry kind="lib" path="lib/poi-ooxml-schemas-3.6-20091214.jar"/>
 	<classpathentry kind="lib" path="lib/poi-scratchpad-3.6-20091214.jar"/>
+	<classpathentry kind="lib" path="lib/iText-2.0.8.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
